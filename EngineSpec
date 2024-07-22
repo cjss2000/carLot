@@ -1,0 +1,49 @@
+public class EngineSpec {
+
+    Boolean transmission;
+
+    Boolean isVintage;
+
+    Boolean isLuxury;
+
+
+
+    EngineSpec(){
+
+    }
+
+    EngineSpec(Boolean transmission, Boolean isVintage, Boolean isLuxur){
+
+    }
+    public Boolean getTransmission(){
+        return  transmission;
+    }
+    public void setTransmission(Boolean transmission){
+        this.transmission = transmission;
+    }
+
+    public Boolean getIsVintage(){
+        return  isVintage;
+    }
+
+    public void setIsVintage(Boolean isVintage){
+        this.isVintage = isVintage;
+    }
+
+    public Boolean getIsLuxury(){
+        return  isLuxury;
+    }
+
+    public void setIsVintage(){
+        this.isLuxury = isLuxury;
+    }
+
+
+   public void setEngineSpec(Boolean transmission, Boolean isVintage, Boolean isLuxury){
+        this.transmission = transmission;
+        this.isVintage = isVintage;
+        this.isLuxury = isLuxury;
+
+    }
+
+}
