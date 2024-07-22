@@ -1,0 +1,32 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Cars {
+
+
+    Cars() {
+    }
+
+
+    // Car car = new Car();
+    Map<Integer, Car> CarLot = new HashMap<>();
+
+
+    public void addToCarLot(Car car) {
+       // for (Car c : CarLot.values()) {
+            int id = car.getLotID();
+            CarLot.put(id, car);
+
+        }
+
+
+
+
+
+    public void seeCarLot(){
+        for (Car c : CarLot.values()) {
+            System.out.println("Current Lot specs: " + c);
+        }
+
+    }
+}
