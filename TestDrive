@@ -3,20 +3,22 @@ public class TestDrive {
     public static void main(String[] args) {
 
         Car car = new Car();
-        Car hondaAccord = new Car(1, 1200, "Honda", "Accord", car.engineSpec);
-        Car toyotaCamry = new Car(2, 1500, "Toyota", "Camry", car.getStandardSpec());
-       Car fordPinto   = new Car(3, 2000, "Ford", "Pinto", new EngineSpec(true, true, true));
-        Car saturnSky = new Car(4, 1600, "Saturn", "Sky", car.getStandardSpec());
+        Car hondaAccord = new Car(1, 1200, "Honda", "Accord", car.standardSpec);
+        Car toyotaCamry = new Car(2, 1500, "Toyota", "Camry", car.standardSpec);
+        Car fordPinto = new Car(3, 2000, "Ford", "Pinto", new EngineSpec("manual", false));
+        Car saturnSky = new Car(4, 1600, "Saturn", "Sky", new EngineSpec("automatic" , false));
+        Car nissanGTR = new Car(5, 30000, "Nissan", "GTR", car.luxSpec);
 
 
         Cars carlot = new Cars();
 
-   carlot.addToCarLot(hondaAccord);
-   carlot.addToCarLot(toyotaCamry);
- //  carlot.addToCarLot(fordPinto);
-   carlot.addToCarLot(saturnSky);
+        carlot.addToCarLot(hondaAccord);
+        carlot.addToCarLot(toyotaCamry);
+        carlot.addToCarLot(fordPinto);
+        carlot.addToCarLot(saturnSky);
+        carlot.addToCarLot(nissanGTR);
 
-      carlot.seeCarLot();
+        carlot.seeCarLot();
 
     }
 }
