@@ -9,8 +9,8 @@ public class Car {
 
     EngineSpec engineSpec;
 
-    EngineSpec standardSpec = new EngineSpec(true, false, false);
-    EngineSpec luxSpec = new EngineSpec();
+    EngineSpec standardSpec = new EngineSpec("manual", false);
+    EngineSpec luxSpec = new EngineSpec("automatic", true);
     //want to increase price of car object by 10,000
 
     EngineSpec vintageSpec = new EngineSpec();
@@ -23,6 +23,8 @@ public class Car {
         this.make = make;
         this.model = model;
         this.engineSpec = engineSpec;
+//        this.engineSpec.transmission;
+//        this.engineSpec.isLuxury;
     }
 
     Car() {
@@ -65,23 +67,11 @@ public class Car {
         return this.engineSpec;
     }
 
-    public void setEngineSpec(Boolean transmission, Boolean isVintage, Boolean isLuxury) {
-        this.engineSpec.setEngineSpec(transmission, isVintage,isLuxury);
-    }
-    public void setStandardSpec(Boolean transmission, Boolean isVintage, Boolean isLuxury){
-        this.engineSpec.transmission = false;
-        this.engineSpec.isLuxury = false;
-        this.engineSpec.isVintage = false;
-    }
 
-
-    public EngineSpec getStandardSpec(){
-        return this.standardSpec;
-    }
 
     @Override
     public String toString(){
-        return "Car on carlot: " + " Lot spot (ID) " + this.lotID + " cost: " + this.price + " Car make " + this.make + " " + this.model + " Specs: " + this.getEngineSpec();
+        return "Car on carlot: " + " Lot spot (ID) " + this.lotID + " cost: " + this.price + " Car make " + this.make + " " + this.model + " Specs: " + " Tranmission:" + this.engineSpec.transmission + " luxury class: " + this.engineSpec.isLuxury ;
      }
 
 }
