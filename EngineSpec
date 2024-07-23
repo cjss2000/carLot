@@ -1,8 +1,6 @@
 public class EngineSpec {
 
-    Boolean transmission;
-
-    Boolean isVintage;
+    String transmission;
 
     Boolean isLuxury;
 
@@ -12,23 +10,22 @@ public class EngineSpec {
 
     }
 
-    EngineSpec(Boolean transmission, Boolean isVintage, Boolean isLuxur){
+    EngineSpec(String transmission, Boolean isLuxury){
+        this.transmission = transmission;
+        this.isLuxury = isLuxury;
 
     }
-    public Boolean getTransmission(){
+
+
+
+    public String getTransmission(){
         return  transmission;
     }
-    public void setTransmission(Boolean transmission){
+    public void setTransmission(String transmission){
         this.transmission = transmission;
     }
 
-    public Boolean getIsVintage(){
-        return  isVintage;
-    }
 
-    public void setIsVintage(Boolean isVintage){
-        this.isVintage = isVintage;
-    }
 
     public Boolean getIsLuxury(){
         return  isLuxury;
@@ -39,9 +36,8 @@ public class EngineSpec {
     }
 
 
-   public void setEngineSpec(Boolean transmission, Boolean isVintage, Boolean isLuxury){
+   public void setEngineSpec(String transmission, Boolean isLuxury){
         this.transmission = transmission;
-        this.isVintage = isVintage;
         this.isLuxury = isLuxury;
 
     }
